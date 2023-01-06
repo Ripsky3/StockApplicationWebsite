@@ -4,6 +4,9 @@ const app = express();
 const path = require("path");
 const hbs = require("hbs");
 
+const port = process.env.PORT || 3000;
+
+
 //getStockPrice("AAPL");
 
 // Directories
@@ -36,6 +39,6 @@ app.get("/help", (err, res) => {
     });
 })
 
-app.listen(3000, () => {
-    console.log("Server starting on port 3000");
+app.listen(port, () => {
+    console.log("Server starting on port " + port);
 })
